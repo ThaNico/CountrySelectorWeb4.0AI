@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dumb</title>
+	
+	<style>
+		body {
+			text-align:center;
+		}
+		#countryViewer {
+			width:50px;
+			height:20px;
+			background:aliceblue;
+			border:1px solid #000042;
+			border-radius:69%;
+			margin: 0 auto;
+			margin-top:.42em;
+		}
+	</style>
+</head>
+<body>
+	<label for="country">Please select your country :</label><br>
+	<input name="country" placeholder="..." readonly="true" onclick="doMagic(this)"/>
+	<div id="countryViewer"></div>
+	
+	<script type="text/javascript">
+		function doMagic(elem) {
+			console.log(elem)
+		}
+	</script>
+</body>
+</html>
