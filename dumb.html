@@ -6,6 +6,9 @@
 	<style>
 		#container {
 			width:180px;
+			font-family:"Comic sans ms";
+			font-size:14px;
+			color:lime;
 		}
 		#countryViewer {
 			height:20px;
@@ -18,6 +21,17 @@
 		.flagImage {
 			width:25px;
 			position:absolute;
+			overflow:hidden;
+		}
+		
+		.btn {
+			margin-top:4.2em;
+		}
+		.btn-helicopter {
+		  animation: rotate 2s linear infinite;
+		}
+		@keyframes rotate{
+		  to{ transform: rotate(360deg); }
 		}
 	</style>
 </head>
@@ -26,6 +40,7 @@
 		<label for="country">Please select your country :</label><br>
 		<input id="country" name="country" placeholder="..." readonly="true" onclick="doMagic(this)"/>
 		<div id="countryViewer"></div>
+		<button id="helico" style="display:none" onclick="alert('I will not code this')" class="btn btn-helicopter">NEXT STEP !!</button>
 	</div>
 	
 	<script type="text/javascript" src="countries.json"></script>
@@ -36,6 +51,7 @@
 		
 		function doMagic(elem) {
 			stop = false;
+			document.getElementById("helico").style.display = "none"
 			startFlagImage();
 			setTimeout(startFlagImage, 500);
 		}
@@ -72,6 +88,7 @@
 			img.onclick = function() {
 				stop = true;
 				document.getElementById("country").value = country["name"]
+				document.getElementById("helico").style.display = "block"
 			}
 			return img;
 		}
