@@ -16,12 +16,15 @@
 			margin: 0 auto;
 			margin-top:.42em;
 		}
+		.flagImage {
+			width:25px;
+		}
 	</style>
 </head>
 <body>
 	<label for="country">Please select your country :</label><br>
 	<input name="country" placeholder="..." readonly="true" onclick="doMagic(this)"/>
-	<div id="countryViewer"></div>
+	<div id="countryViewer"><img class="flagImage" src="flags/fr.svg"/></div>
 	
 	<script type="text/javascript">
 		function doMagic(elem) {
