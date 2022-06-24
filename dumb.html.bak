@@ -32,28 +32,31 @@
 	<script type="text/javascript">
 		var countries = JSON.parse(countries);
 		var countryIndex = 0;
+		var endAll = false;
 		
 		function doMagic(elem) {
+			endAll = true;
 			startFlagImage();
 			setTimeout(startFlagImage, 500);
 		}
 		
 		function startFlagImage() {
-			var country = countries[countryIndex];
+			endAll = false;
+			var country = countries[countryIndex]
 			countryIndex++;
 			if(countryIndex >= countries.length) {
 				countryIndex = 0;
-				console.log("really ? tf are you doing reading this");
+				console.log("really ? tf are you doing reading this")
 			}
 			
-			var img = createFlagImage(country);
+			var img = createFlagImage(country)
 			document.getElementById("countryViewer").appendChild(img);
 			
 			var timer = setInterval(function () {
 				var newLeft = parseFloat(img.style.left) + 0.69;
 				img.style.left = newLeft + "px";
 			  
-				if (img.offsetWidth + newLeft > img.parentElement.clientWidth) {
+				if ((img.offsetWidth + newLeft > img.parentElement.clientWidth) || endAll) {
 					endFlagImage(timer, img);
 				}
 			}, 10);
