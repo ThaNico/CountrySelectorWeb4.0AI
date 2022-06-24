@@ -24,7 +24,7 @@
 <body>
 	<div id="container">
 		<label for="country">Please select your country :</label><br>
-		<input name="country" placeholder="..." readonly="true" onclick="doMagic(this)"/>
+		<input id="country" name="country" placeholder="..." readonly="true" onclick="doMagic(this)"/>
 		<div id="countryViewer"></div>
 	</div>
 	
@@ -32,13 +32,18 @@
 	<script type="text/javascript">
 		var countries = JSON.parse(countries);
 		var countryIndex = 0;
+		var stop;
 		
 		function doMagic(elem) {
+			stop = false;
 			startFlagImage();
 			setTimeout(startFlagImage, 500);
 		}
 		
 		function startFlagImage() {
+			if(stop)
+				return;
+				
 			var country = countries[countryIndex];
 			countryIndex++;
 			if(countryIndex >= countries.length) {
@@ -53,7 +58,7 @@
 				var newLeft = parseFloat(img.style.left) + 0.69;
 				img.style.left = newLeft + "px";
 			  
-				if (img.offsetWidth + newLeft > img.parentElement.clientWidth) {
+				if ((img.offsetWidth + newLeft > img.parentElement.clientWidth) || stop) {
 					endFlagImage(timer, img);
 				}
 			}, 10);
@@ -61,10 +66,13 @@
 		
 		function createFlagImage(country) {
 			var img = document.createElement("img");
-			img.id = country["name"];
 			img.src = "flags/" + country["code"] + ".svg";
 			img.classList.add("flagImage");
 			img.style.left = "0px";
+			img.onclick = function() {
+				stop = true;
+				document.getElementById("country").value = country["name"]
+			}
 			return img;
 		}
 		
