@@ -28,10 +28,17 @@
 			margin-top:4.2em;
 		}
 		.btn-helicopter {
-		  animation: rotate 2s linear infinite;
+		  animation: rotate 5s linear infinite;
 		}
 		@keyframes rotate{
 		  to{ transform: rotate(360deg); }
+		}
+		
+		#nextStep {
+			color:#979a9d;
+		}
+		#error {
+			color:red;
 		}
 	</style>
 </head>
@@ -40,7 +47,9 @@
 		<label for="country">Please select your country :</label><br>
 		<input id="country" name="country" placeholder="..." readonly="true" onclick="doMagic(this)"/>
 		<div id="countryViewer"></div>
-		<button id="helico" style="display:none" onclick="alert('I will not code this')" class="btn btn-helicopter">NEXT STEP !!</button>
+		<button id="helico" style="display:none" onclick="displayError()" class="btn btn-helicopter">NEXT STEP <span id="nextStep" onclick="event.stopPropagation(); displaySuccess()">!!!</span></button>
+		<div id="error" style="display:none; font-size:8px">Please click on the exclamation marks to access the next step</div>
+		<div id="success" style="display:none;">Congratulations ! Let's go to the next step</div>
 		<span style="font-size: 8px; color: black;">© 2051 - KountrySelektorXpert UX-Engineering</span>
 	</div>
 	
@@ -100,6 +109,16 @@
 			startFlagImage();
 		}
 		
+		function displayError() {
+			var errorStyle = document.getElementById("error").style
+			errorStyle.display = "block"
+			errorStyle.fontSize = (parseFloat(errorStyle.fontSize) + 0.69) + "px"
+		}
+		
+		function displaySuccess() {
+			document.getElementById("error").style.display = "none"
+			document.getElementById("success").style.display = "block"
+		}
 	</script>
 </body>
 </html>
