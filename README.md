@@ -6,4 +6,4 @@ Thanks to https://github.com/lipis/flag-icons for the flags and (reworked) json 
 
 ## [1.0.0] - 2022-06-25
 - Initial release  
-![video](https://user-images.githubusercontent.com/9906385/175755822-7e7f17da-8021-47c6-a571-0d7a59115265.mp4)
+![CountrySelLastGen](https://user-images.githubusercontent.com/9906385/175755963-5eb7ea56-281e-483d-9846-3809852c7d38.gif)
