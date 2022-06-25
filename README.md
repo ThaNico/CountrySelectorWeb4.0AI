@@ -6,7 +6,9 @@ Thanks to https://github.com/lipis/flag-icons for the flags and (reworked) json 
 
 
 ## [1.1.0] - WIP
-- Improved UX on the next step process (u/I_like_and_anarchy, u/Thestarchypotat)
+- Improved UX on the next step process (feedback from: u/I_like_and_anarchy, u/Thestarchypotat)
+- Fix for Zimbabwe customers (the fix might also affect Zambia) (feedback from: u/theawesomenachos)
+
 
 
 ## [1.0.0] - 2022-06-25
