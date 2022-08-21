@@ -1,4 +1,11 @@
 # CountrySelectorWeb4.0AI
+
+This joke was made for reddit in the /r/badUIbattles subreddit (please don't judge ^^')   
+Link of the post [here](https://www.reddit.com/r/badUIbattles/comments/vjxx84/let_me_introduce_you_a_new_generation_of_country/)  
+Also posted in /r/ProgrammerHumor [here](https://www.reddit.com/r/ProgrammerHumor/comments/vk4qjo/let_me_introduce_you_a_new_generation_of_country/)
+
+------------------
+
 This is the latest generation of country selectors (and a bad ui joke)  
 It takes approximately 5mn03 to loop through the countries, I might improve this in the future, eventually, after some sleep  
 
