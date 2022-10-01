@@ -1,7 +1,7 @@
 # CountrySelectorWeb4.0AI
 
 > /!\ This is a bad ui joke /!\
-> It was made for reddit in the /r/badUIbattles subreddit, very late at night
+> It was made for reddit in the /r/badUIbattles subreddit, very late at night  
 > Link of the original post [here](https://www.reddit.com/r/badUIbattles/comments/vjxx84/let_me_introduce_you_a_new_generation_of_country/),
  also posted in /r/ProgrammerHumor [here](https://www.reddit.com/r/ProgrammerHumor/comments/vk4qjo/let_me_introduce_you_a_new_generation_of_country/)
 
